@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Noto+Sans+JP:wght@200;400;700&display=swap');
+@import url("https://use.typekit.net/ztr3yfh.css");
+
+/* font-family: 'Lilita One', cursive;
+font-family: 'Noto Sans JP', sans-serif; */
+body {
+    display: grid;
+    justify-content: center;
+}
+
+h1 {
+    color: #f09cd4;
+    font-family: gambado-sans-forte, sans-serif;
+    font-size: 70px;
+    justify-self: center;
+    margin-top: 3%;
+    margin-bottom: -7px;
+}
+
+p {
+    justify-self: center;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+header {
+    display: grid;
+}
+
+input {
+    width: 5%;
+    height: 82px;
+    font-size: 45px;
+    padding: 5px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid lightgray;
+}
+
+.letters,
+.buttons, #output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+button {
+    background-color: #084227;
+    color: whitesmoke;
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+    width: 9%;
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 8px;
+    font-size: 15px;
+}
+
+
+#output{
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-self: center;
+    min-width: 0;
+    margin-top: 20px;
+    width: 60%;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+}
+
+.bounce{
+    animation: bounce 2s ease-out infinite;
+}
+
+@keyframes bounce {
+    39% {transform: translateY(-7px)}
+    60% {transform: translateY(5px)}
+    70% {transform: translateY(0px)}
+    80% {transform: translateY(-2px)}
+    100% {transform: translateY(0px)}
+}
+
+.border{
+    border-radius: 3px;
+    border: 1px solid lightgray;
+}
+
+
+.title{
+    justify-self: left;
+    margin-left: 4%;
+    color: #f09cd4;
+    font-size: 30px;
+    font-family: gambado-sans-forte, sans-serif;
+    white-space: nowrap;
+}
+
+.error{
+    font-size: 40px;
+    font-family: gambado-sans-forte, sans-serif;
+}
+.data-list{
+    list-style-type: none;
+    padding: 15px;
+}
+
+ul{
+    margin-top: -20px;
+    display: flex;
+    flex-flow: row wrap;
+}
