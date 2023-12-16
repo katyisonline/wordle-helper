@@ -16,6 +16,17 @@ $("h1").on("mouseover", function () {
 })
 
 
+
+$('#clear').click(function () {
+    // removing all data
+    $('#output').empty()
+    $('#output').removeClass('show')
+    // clearing text fields
+    $("#s0").val(''), $("#s1").val(''), $("#s2").val(''), $("#s3").val(''), $("#s4").val('')
+})
+
+
+
 function genWord() {
     // gather all input fields
     let firstInput = [$("#s0").val(), $("#s1").val(), $("#s2").val(), $("#s3").val(), $("#s4").val()];
@@ -96,13 +107,18 @@ function display(data) {
         resTitle.addClass('title');
         resTitle.text('Possible answers are...');
 
-        $('#output').prepend(resTitle);
+        let resSubtitle = $('<h3></h3>');
+        resSubtitle.addClass('subTitle');
+        resSubtitle.text('(Click on results to eliminate!)')
+
+        $('#output').prepend(resTitle, resSubtitle);
 
         var list = $('<ul></ul>');
+        list.addClass('data-list')
 
         for (let i = 0; i < data.length; i++) {
             let dataLi = $('<li></li>');
-            dataLi.addClass('data-list');
+            dataLi.addClass('data-list-item');
             dataLi.text(data[i]);
             list.append(dataLi);
         }
@@ -116,3 +132,10 @@ function display(data) {
         $('#output').append(errData);
     }
 }
+
+
+// function to 'eliminate' words that don't work
+$('#output').on('click', '.data-list-item', function () {
+    $(this).css('color', '#eb81c7');
+});
+

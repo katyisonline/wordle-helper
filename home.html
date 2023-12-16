@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
+    <script defer src="main.js">
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Wordle Helper</title>
 </head>
@@ -28,14 +30,13 @@
 
     <div class="buttons">
         <button type="submit" value="Search" id="findWord" onclick="genWord()">FIND</button>
-        <button type="clear" value="Clear" id="clear" onClick="location.href=location.href">CLEAR</button>
+        <button type="reset" value="Clear" id="clear">CLEAR</button>
     </div>
 
     <section id="output">
     </section>
 </section>
-    <script src="main.js">
-    </script>
+
 </body>
 
 </html>

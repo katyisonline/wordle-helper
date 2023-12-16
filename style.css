@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Noto+Sans+JP:wght@200;400;700&display=swap");
 @import url("https://use.typekit.net/ztr3yfh.css");
 
-
-
 body {
   margin: 0;
 }
@@ -18,7 +16,6 @@ h1 {
   color: #f09cd4;
   font-family: gambado-sans-forte, sans-serif;
   font-size: 70px;
-  justify-self: center;
   margin-top: 3%;
   margin-bottom: -7px;
 }
@@ -29,7 +26,6 @@ p {
   padding: 10px;
   font-family: "Noto Sans JP", sans-serif;
 }
-
 
 input {
   width: 5%;
@@ -51,15 +47,13 @@ input {
   gap: 5px;
 }
 
-
-#output{
+#output {
   border-radius: 3px;
   border: none;
 }
 
-.buttons{
-    display: flex;
-
+.buttons {
+  display: flex;
 }
 
 button {
@@ -116,9 +110,15 @@ button {
 .title {
   justify-self: left;
   margin-left: 4%;
-  color: white;
+  margin-bottom: 0;
   font-size: 30px;
-  font-family: gambado-sans-forte, sans-serif;
+  white-space: nowrap;
+}
+.subTitle {
+  justify-self: left;
+  margin-left: 4%;
+  font-size: 20px;
+  margin-bottom: 2rem;
   white-space: nowrap;
 }
 
@@ -126,13 +126,53 @@ button {
   font-size: 40px;
   font-family: gambado-sans-forte, sans-serif;
 }
-.data-list {
+.data-list-item {
   list-style-type: none;
   padding: 15px;
+  cursor: pointer;
 }
 
 ul {
   margin-top: -20px;
   display: flex;
   flex-flow: row wrap;
+}
+
+@media only screen and (max-width: 1281px) {
+  h1 {
+    font-size: 55px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+  .subTitle{
+    font-size: 20px
+  }
+  input {
+    width: 60px;
+    height: 70px;
+    font-size: 40px;
+  }
+  
+}
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+  .subTitle{
+    font-size: 20px
+  }
+  input {
+    width: 55px;
+    height: 65px;
+    font-size: 40px;
+  }
+  #output{
+    width: 100%
+  }
 }
